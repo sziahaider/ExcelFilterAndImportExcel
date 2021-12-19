@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Excel.dbo.Data' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Data">
+          <Property Name="Channel" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Day" Type="varchar" MaxLength="50" />
+          <Property Name="Caption" Type="varchar" MaxLength="50" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="SubCategory" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="AgencyName" Type="varchar" MaxLength="50" />
+          <Property Name="AdType" Type="varchar" MaxLength="50" />
+          <Property Name="AdStart" Type="time" Precision="7" />
+          <Property Name="AdEnd" Type="time" Precision="7" />
+          <Property Name="TransmissionHour" Type="int" />
+          <Property Name="TimeBand" Type="varchar" MaxLength="50" />
+          <Property Name="AdDurationInMins" Type="time" Precision="7" />
+          <Property Name="AdDurationInSec" Type="int" />
+          <Property Name="SlotPosition" Type="int" />
+          <Property Name="SlotCount" Type="int" />
+          <Property Name="SlotPosition2" Type="int" />
+          <Property Name="SlotCount2" Type="int" />
+          <Property Name="SlotPositionAll" Type="int" />
+          <Property Name="SlotCountAll" Type="int" />
+          <Property Name="AdSlot" Type="varchar" MaxLength="50" />
+          <Property Name="NetAmount" Type="int" />
+          <Property Name="ProgramName" Type="varchar" MaxLength="50" />
+          <Property Name="ProgramType" Type="varchar" MaxLength="50" />
+          <Property Name="ProgramStart" Type="time" Precision="7" />
+          <Property Name="ProgramEnd" Type="time" Precision="7" />
+          <Property Name="MidBreak" Type="varchar" MaxLength="50" />
+          <Property Name="BreakStart" Type="time" Precision="7" />
+          <Property Name="BreakEnd" Type="time" Precision="7" />
+          <Property Name="Quality" Type="varchar" MaxLength="50" />
+          <Property Name="ClientType" Type="varchar" MaxLength="50" />
+          <Property Name="CustomCaptionName" Type="varchar" MaxLength="50" />
+          <Property Name="CustomDuration" Type="int" />
+          <Property Name="CommecialMarkID" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Excel.dbo.Directories' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Directories">
+          <Property Name="Channel" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="SubCategories" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="AgencyName" Type="varchar" MaxLength="50" />
+          <Property Name="AdType" Type="varchar" MaxLength="50" />
+          <Property Name="TransmissionHour" Type="int" />
+          <Property Name="TimeBand" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Excel.dbo.Rate' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rate">
+          <Property Name="Channel" Type="varchar" MaxLength="50" />
+          <Property Name="Hour" Type="int" />
+          <Property Name="Monday" Type="varchar" MaxLength="50" />
+          <Property Name="Tuesday" Type="varchar" MaxLength="50" />
+          <Property Name="Wednesday" Type="varchar" MaxLength="50" />
+          <Property Name="Thursday" Type="varchar" MaxLength="50" />
+          <Property Name="Friday" Type="varchar" MaxLength="50" />
+          <Property Name="Saturday" Type="varchar" MaxLength="50" />
+          <Property Name="Sunday" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <Function Name="sp_insert_data" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_date" Type="date" Mode="In" />
+    <Parameter Name="p_day" Type="varchar" Mode="In" />
+    <Parameter Name="p_caption" Type="varchar" Mode="In" />
+    <Parameter Name="p_brand" Type="varchar" Mode="In" />
+    <Parameter Name="p_subcategory" Type="varchar" Mode="In" />
+    <Parameter Name="p_category" Type="varchar" Mode="In" />
+    <Parameter Name="p_companyname" Type="varchar" Mode="In" />
+    <Parameter Name="p_agencyName" Type="varchar" Mode="In" />
+    <Parameter Name="p_adtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_adstart" Type="time" Mode="In" />
+    <Parameter Name="p_adend" Type="time" Mode="In" />
+    <Parameter Name="p_transmissionhour" Type="int" Mode="In" />
+    <Parameter Name="p_timeband" Type="varchar" Mode="In" />
+    <Parameter Name="p_addurationinmins" Type="time" Mode="In" />
+    <Parameter Name="p_addurationinsec" Type="int" Mode="In" />
+    <Parameter Name="p_slotposition" Type="int" Mode="In" />
+    <Parameter Name="p_slotcount" Type="int" Mode="In" />
+    <Parameter Name="p_slotposition2" Type="int" Mode="In" />
+    <Parameter Name="p_slotcount2" Type="int" Mode="In" />
+    <Parameter Name="p_soltpositionall" Type="int" Mode="In" />
+    <Parameter Name="p_slotcountall" Type="int" Mode="In" />
+    <Parameter Name="p_adslot" Type="varchar" Mode="In" />
+    <Parameter Name="p_netamount" Type="int" Mode="In" />
+    <Parameter Name="p_programname" Type="varchar" Mode="In" />
+    <Parameter Name="p_programtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_programstart" Type="time" Mode="In" />
+    <Parameter Name="p_programend" Type="time" Mode="In" />
+    <Parameter Name="p_midbreak" Type="varchar" Mode="In" />
+    <Parameter Name="p_breakstart" Type="varchar" Mode="In" />
+    <Parameter Name="p_breakend" Type="varchar" Mode="In" />
+    <Parameter Name="p_quality" Type="varchar" Mode="In" />
+    <Parameter Name="p_clienttype" Type="varchar" Mode="In" />
+    <Parameter Name="p_customcaptionname" Type="varchar" Mode="In" />
+    <Parameter Name="p_customduration" Type="varchar" Mode="In" />
+    <Parameter Name="p_commercialmarkid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_directories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_companyname" Type="varchar" Mode="In" />
+    <Parameter Name="p_brand" Type="varchar" Mode="In" />
+    <Parameter Name="p_subcategory" Type="varchar" Mode="In" />
+    <Parameter Name="p_category" Type="varchar" Mode="In" />
+    <Parameter Name="p_agencyName" Type="varchar" Mode="In" />
+    <Parameter Name="p_adtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_transmissionhour" Type="int" Mode="In" />
+    <Parameter Name="p_timeband" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_importexcel_data" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="out_error_number" Type="int" Mode="InOut" />
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_date" Type="date" Mode="In" />
+    <Parameter Name="p_day" Type="varchar" Mode="In" />
+    <Parameter Name="p_caption" Type="varchar" Mode="In" />
+    <Parameter Name="p_brand" Type="varchar" Mode="In" />
+    <Parameter Name="p_subcategory" Type="varchar" Mode="In" />
+    <Parameter Name="p_category" Type="varchar" Mode="In" />
+    <Parameter Name="p_companyname" Type="varchar" Mode="In" />
+    <Parameter Name="p_agencyName" Type="varchar" Mode="In" />
+    <Parameter Name="p_adtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_adstart" Type="time" Mode="In" />
+    <Parameter Name="p_adend" Type="time" Mode="In" />
+    <Parameter Name="p_transmissionhour" Type="int" Mode="In" />
+    <Parameter Name="p_timeband" Type="varchar" Mode="In" />
+    <Parameter Name="p_addurationinmins" Type="time" Mode="In" />
+    <Parameter Name="p_addurationinsec" Type="int" Mode="In" />
+    <Parameter Name="p_slotposition" Type="int" Mode="In" />
+    <Parameter Name="p_slotcount" Type="int" Mode="In" />
+    <Parameter Name="p_slotposition2" Type="int" Mode="In" />
+    <Parameter Name="p_slotcount2" Type="int" Mode="In" />
+    <Parameter Name="p_soltpositionall" Type="int" Mode="In" />
+    <Parameter Name="p_slotcountall" Type="int" Mode="In" />
+    <Parameter Name="p_adslot" Type="varchar" Mode="In" />
+    <Parameter Name="p_netamount" Type="int" Mode="In" />
+    <Parameter Name="p_programname" Type="varchar" Mode="In" />
+    <Parameter Name="p_programtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_programstart" Type="time" Mode="In" />
+    <Parameter Name="p_programend" Type="time" Mode="In" />
+    <Parameter Name="p_midbreak" Type="varchar" Mode="In" />
+    <Parameter Name="p_breakstart" Type="varchar" Mode="In" />
+    <Parameter Name="p_breakend" Type="varchar" Mode="In" />
+    <Parameter Name="p_quality" Type="varchar" Mode="In" />
+    <Parameter Name="p_clienttype" Type="varchar" Mode="In" />
+    <Parameter Name="p_customcaptionname" Type="varchar" Mode="In" />
+    <Parameter Name="p_customduration" Type="varchar" Mode="In" />
+    <Parameter Name="p_commercialmarkid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_importexcel_directories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="out_error_number" Type="int" Mode="InOut" />
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_companyname" Type="varchar" Mode="In" />
+    <Parameter Name="p_brand" Type="varchar" Mode="In" />
+    <Parameter Name="p_subcategory" Type="varchar" Mode="In" />
+    <Parameter Name="p_category" Type="varchar" Mode="In" />
+    <Parameter Name="p_agencyName" Type="varchar" Mode="In" />
+    <Parameter Name="p_adtype" Type="varchar" Mode="In" />
+    <Parameter Name="p_transmissionhour" Type="int" Mode="In" />
+    <Parameter Name="p_timeband" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_importexcel_rate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="out_error_number" Type="int" Mode="InOut" />
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_hour" Type="int" Mode="In" />
+    <Parameter Name="p_monday" Type="varchar" Mode="In" />
+    <Parameter Name="p_tuesday" Type="varchar" Mode="In" />
+    <Parameter Name="p_wednesday" Type="varchar" Mode="In" />
+    <Parameter Name="p_thursday" Type="varchar" Mode="In" />
+    <Parameter Name="p_friday" Type="varchar" Mode="In" />
+    <Parameter Name="p_saturday" Type="varchar" Mode="In" />
+    <Parameter Name="p_sunday" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_rate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_channel" Type="varchar" Mode="In" />
+    <Parameter Name="p_hour" Type="int" Mode="In" />
+    <Parameter Name="p_monday" Type="varchar" Mode="In" />
+    <Parameter Name="p_tuesday" Type="varchar" Mode="In" />
+    <Parameter Name="p_wednesday" Type="varchar" Mode="In" />
+    <Parameter Name="p_thursday" Type="varchar" Mode="In" />
+    <Parameter Name="p_friday" Type="varchar" Mode="In" />
+    <Parameter Name="p_saturday" Type="varchar" Mode="In" />
+    <Parameter Name="p_sunday" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ExcelModelStoreContainer" />
+</Schema>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ExcelDBEntities3" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_delete_records">
+      <Parameter Name="p_OrderDate" Mode="In" Type="DateTime" />
+      <Parameter Name="p_Region" Mode="In" Type="String" />
+      <Parameter Name="p_Rep" Mode="In" Type="String" />
+      <Parameter Name="p_Item" Mode="In" Type="String" />
+      <Parameter Name="p_Units" Mode="In" Type="Int32" />
+      <Parameter Name="p_UnitCost" Mode="In" Type="Double" />
+      <Parameter Name="p_Total" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_importexcel">
+      <Parameter Name="p_OrderDate" Mode="In" Type="String" />
+      <Parameter Name="p_Region" Mode="In" Type="String" />
+      <Parameter Name="p_Rep" Mode="In" Type="String" />
+      <Parameter Name="p_Item" Mode="In" Type="String" />
+      <Parameter Name="p_Unit" Mode="In" Type="Int32" />
+      <Parameter Name="p_UnitCost" Mode="In" Type="Int32" />
+      <Parameter Name="p_Total" Mode="In" Type="Double" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

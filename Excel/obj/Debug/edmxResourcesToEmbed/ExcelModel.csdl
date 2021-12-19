@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ExcelEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_insert_data">
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_date" Mode="In" Type="DateTime" />
+      <Parameter Name="p_day" Mode="In" Type="String" />
+      <Parameter Name="p_caption" Mode="In" Type="String" />
+      <Parameter Name="p_brand" Mode="In" Type="String" />
+      <Parameter Name="p_subcategory" Mode="In" Type="String" />
+      <Parameter Name="p_category" Mode="In" Type="String" />
+      <Parameter Name="p_companyname" Mode="In" Type="String" />
+      <Parameter Name="p_agencyName" Mode="In" Type="String" />
+      <Parameter Name="p_adtype" Mode="In" Type="String" />
+      <Parameter Name="p_adstart" Mode="In" Type="Time" />
+      <Parameter Name="p_adend" Mode="In" Type="Time" />
+      <Parameter Name="p_transmissionhour" Mode="In" Type="Int32" />
+      <Parameter Name="p_timeband" Mode="In" Type="String" />
+      <Parameter Name="p_addurationinmins" Mode="In" Type="Time" />
+      <Parameter Name="p_addurationinsec" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotposition" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcount" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotposition2" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcount2" Mode="In" Type="Int32" />
+      <Parameter Name="p_soltpositionall" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcountall" Mode="In" Type="Int32" />
+      <Parameter Name="p_adslot" Mode="In" Type="String" />
+      <Parameter Name="p_netamount" Mode="In" Type="Int32" />
+      <Parameter Name="p_programname" Mode="In" Type="String" />
+      <Parameter Name="p_programtype" Mode="In" Type="String" />
+      <Parameter Name="p_programstart" Mode="In" Type="Time" />
+      <Parameter Name="p_programend" Mode="In" Type="Time" />
+      <Parameter Name="p_midbreak" Mode="In" Type="String" />
+      <Parameter Name="p_breakstart" Mode="In" Type="String" />
+      <Parameter Name="p_breakend" Mode="In" Type="String" />
+      <Parameter Name="p_quality" Mode="In" Type="String" />
+      <Parameter Name="p_clienttype" Mode="In" Type="String" />
+      <Parameter Name="p_customcaptionname" Mode="In" Type="String" />
+      <Parameter Name="p_customduration" Mode="In" Type="String" />
+      <Parameter Name="p_commercialmarkid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_directories">
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_companyname" Mode="In" Type="String" />
+      <Parameter Name="p_brand" Mode="In" Type="String" />
+      <Parameter Name="p_subcategory" Mode="In" Type="String" />
+      <Parameter Name="p_category" Mode="In" Type="String" />
+      <Parameter Name="p_agencyName" Mode="In" Type="String" />
+      <Parameter Name="p_adtype" Mode="In" Type="String" />
+      <Parameter Name="p_transmissionhour" Mode="In" Type="Int32" />
+      <Parameter Name="p_timeband" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_importexcel_data">
+      <Parameter Name="out_error_number" Mode="InOut" Type="Int32" />
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_date" Mode="In" Type="DateTime" />
+      <Parameter Name="p_day" Mode="In" Type="String" />
+      <Parameter Name="p_caption" Mode="In" Type="String" />
+      <Parameter Name="p_brand" Mode="In" Type="String" />
+      <Parameter Name="p_subcategory" Mode="In" Type="String" />
+      <Parameter Name="p_category" Mode="In" Type="String" />
+      <Parameter Name="p_companyname" Mode="In" Type="String" />
+      <Parameter Name="p_agencyName" Mode="In" Type="String" />
+      <Parameter Name="p_adtype" Mode="In" Type="String" />
+      <Parameter Name="p_adstart" Mode="In" Type="Time" />
+      <Parameter Name="p_adend" Mode="In" Type="Time" />
+      <Parameter Name="p_transmissionhour" Mode="In" Type="Int32" />
+      <Parameter Name="p_timeband" Mode="In" Type="String" />
+      <Parameter Name="p_addurationinmins" Mode="In" Type="Time" />
+      <Parameter Name="p_addurationinsec" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotposition" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcount" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotposition2" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcount2" Mode="In" Type="Int32" />
+      <Parameter Name="p_soltpositionall" Mode="In" Type="Int32" />
+      <Parameter Name="p_slotcountall" Mode="In" Type="Int32" />
+      <Parameter Name="p_adslot" Mode="In" Type="String" />
+      <Parameter Name="p_netamount" Mode="In" Type="Int32" />
+      <Parameter Name="p_programname" Mode="In" Type="String" />
+      <Parameter Name="p_programtype" Mode="In" Type="String" />
+      <Parameter Name="p_programstart" Mode="In" Type="Time" />
+      <Parameter Name="p_programend" Mode="In" Type="Time" />
+      <Parameter Name="p_midbreak" Mode="In" Type="String" />
+      <Parameter Name="p_breakstart" Mode="In" Type="String" />
+      <Parameter Name="p_breakend" Mode="In" Type="String" />
+      <Parameter Name="p_quality" Mode="In" Type="String" />
+      <Parameter Name="p_clienttype" Mode="In" Type="String" />
+      <Parameter Name="p_customcaptionname" Mode="In" Type="String" />
+      <Parameter Name="p_customduration" Mode="In" Type="String" />
+      <Parameter Name="p_commercialmarkid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_importexcel_directories">
+      <Parameter Name="out_error_number" Mode="InOut" Type="Int32" />
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_companyname" Mode="In" Type="String" />
+      <Parameter Name="p_brand" Mode="In" Type="String" />
+      <Parameter Name="p_subcategory" Mode="In" Type="String" />
+      <Parameter Name="p_category" Mode="In" Type="String" />
+      <Parameter Name="p_agencyName" Mode="In" Type="String" />
+      <Parameter Name="p_adtype" Mode="In" Type="String" />
+      <Parameter Name="p_transmissionhour" Mode="In" Type="Int32" />
+      <Parameter Name="p_timeband" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_importexcel_rate">
+      <Parameter Name="out_error_number" Mode="InOut" Type="Int32" />
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_hour" Mode="In" Type="Int32" />
+      <Parameter Name="p_monday" Mode="In" Type="String" />
+      <Parameter Name="p_tuesday" Mode="In" Type="String" />
+      <Parameter Name="p_wednesday" Mode="In" Type="String" />
+      <Parameter Name="p_thursday" Mode="In" Type="String" />
+      <Parameter Name="p_friday" Mode="In" Type="String" />
+      <Parameter Name="p_saturday" Mode="In" Type="String" />
+      <Parameter Name="p_sunday" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_rate">
+      <Parameter Name="p_channel" Mode="In" Type="String" />
+      <Parameter Name="p_hour" Mode="In" Type="Int32" />
+      <Parameter Name="p_monday" Mode="In" Type="String" />
+      <Parameter Name="p_tuesday" Mode="In" Type="String" />
+      <Parameter Name="p_wednesday" Mode="In" Type="String" />
+      <Parameter Name="p_thursday" Mode="In" Type="String" />
+      <Parameter Name="p_friday" Mode="In" Type="String" />
+      <Parameter Name="p_saturday" Mode="In" Type="String" />
+      <Parameter Name="p_sunday" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

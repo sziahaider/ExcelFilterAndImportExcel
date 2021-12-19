@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExcelModelStoreContainer" CdmEntityContainer="ExcelEntities">
+    <FunctionImportMapping FunctionImportName="sp_insert_data" FunctionName="ExcelModel.Store.sp_insert_data" />
+    <FunctionImportMapping FunctionImportName="sp_insert_directories" FunctionName="ExcelModel.Store.sp_insert_directories" />
+    <FunctionImportMapping FunctionImportName="sp_insert_importexcel_data" FunctionName="ExcelModel.Store.sp_insert_importexcel_data" />
+    <FunctionImportMapping FunctionImportName="sp_insert_importexcel_directories" FunctionName="ExcelModel.Store.sp_insert_importexcel_directories" />
+    <FunctionImportMapping FunctionImportName="sp_insert_importexcel_rate" FunctionName="ExcelModel.Store.sp_insert_importexcel_rate" />
+    <FunctionImportMapping FunctionImportName="sp_insert_rate" FunctionName="ExcelModel.Store.sp_insert_rate" />
+  </EntityContainerMapping>
+</Mapping>

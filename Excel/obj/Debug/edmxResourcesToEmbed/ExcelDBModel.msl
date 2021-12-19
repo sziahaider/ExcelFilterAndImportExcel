@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExcelDBModelStoreContainer" CdmEntityContainer="ExcelDBEntities3">
+    <FunctionImportMapping FunctionImportName="sp_delete_records" FunctionName="ExcelDBModel.Store.sp_delete_records" />
+    <FunctionImportMapping FunctionImportName="sp_insert_importexcel" FunctionName="ExcelDBModel.Store.sp_insert_importexcel" />
+  </EntityContainerMapping>
+</Mapping>

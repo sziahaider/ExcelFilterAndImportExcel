@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ExcelDB.dbo.SalesOrder' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SalesOrder">
+          <Property Name="OrderDate" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="Rep" Type="varchar" MaxLength="50" />
+          <Property Name="Item" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="int" />
+          <Property Name="UnitCost" Type="int" />
+          <Property Name="Total" Type="float" />
+        </EntityType>-->
+  <Function Name="sp_delete_records" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_OrderDate" Type="date" Mode="In" />
+    <Parameter Name="p_Region" Type="varchar" Mode="In" />
+    <Parameter Name="p_Rep" Type="varchar" Mode="In" />
+    <Parameter Name="p_Item" Type="varchar" Mode="In" />
+    <Parameter Name="p_Units" Type="int" Mode="In" />
+    <Parameter Name="p_UnitCost" Type="float" Mode="In" />
+    <Parameter Name="p_Total" Type="float" Mode="In" />
+  </Function>
+  <Function Name="sp_insert_importexcel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_OrderDate" Type="varchar" Mode="In" />
+    <Parameter Name="p_Region" Type="varchar" Mode="In" />
+    <Parameter Name="p_Rep" Type="varchar" Mode="In" />
+    <Parameter Name="p_Item" Type="varchar" Mode="In" />
+    <Parameter Name="p_Unit" Type="int" Mode="In" />
+    <Parameter Name="p_UnitCost" Type="int" Mode="In" />
+    <Parameter Name="p_Total" Type="float" Mode="In" />
+  </Function>
+  <EntityContainer Name="ExcelDBModelStoreContainer" />
+</Schema>
